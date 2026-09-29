@@ -1,0 +1,1090 @@
+﻿FARM MANAGEMENT SYSTEM
+
+
+
+
+User Story:
+In the Farm Management System (FMS), as a farmer, farm manager, or system administrator, I want to use a centralized Salesforce-based platform to record and manage farm, crop, farmer, and buyer information so that all agricultural data is stored securely and systematically. I want to enter and update farm details, crop production records, and buyer transactions easily through a user-friendly interface with proper validation rules to prevent incorrect entries. I also want the system to generate real-time reports and interactive dashboards so that I can analyze farm productivity, monitor sales, and make informed decisions. Additionally, I want role-based access and secure data storage to ensure that sensitive information is protected while enabling smooth collaboration among users. This system will help reduce manual paperwork, minimize errors, improve efficiency, and support data-driven farm management.
+
+
+
+
+1. INTRODUCTION
+
+
+1.1 Project Overview : 
+
+
+The Farm Management System (FMS) is a Salesforce-based application designed to digitize and streamline agricultural operations. It manages data related to farms, crops, farmers, and buyers while providing real-time insights through reports and dashboards. The system helps farmers and managers monitor agricultural activities efficiently and make informed decisions.
+
+
+
+
+
+
+1.2 Purpose : 
+
+
+The main purpose of this project is to:
+
+
+* Digitize agricultural data management
+* Improve data accuracy and accessibility
+* Automate record handling
+* Enable real-time monitoring
+* Support data-driven farming decisions
+* Enhance productivity and transparency
+2. IDEATION PHASE
+2.1 Problem Statement (Customer Problem Statement Template)
+
+
+PS
+	I am (Customer)
+	I’m trying to
+	But
+	Because
+	Which makes me feel
+	PS-1
+	Farmer
+	Maintain farm and crop records
+	Data is often incomplete or incorrect
+	Records are kept manually in registers
+	Frustrated and confused
+	PS-2
+	Farm Manager
+	Monitor farm productivity and sales
+	Reports are delayed and inaccurate
+	Data is scattered across files and sheets
+	Stressed and inefficient
+	PS-3
+	Buyer
+	Access crop availability and pricing
+	Information is not updated regularly
+	There is no centralized digital system
+	Uncertain and dissatisfied
+	PS-4
+	System Admin
+	Manage user access and system security
+	Unauthorized access may occur
+	Access control is handled manually
+	Concerned and insecure
+	
+
+
+
+
+
+
+
+2.2 Empathy Map Canvas
+Target Users:
+* Farmers
+* Farm Managers
+* Buyers
+* System Administrators
+Empathy Analysis
+* Think & Feel: Need accurate and timely farm data
+* Hear: Feedback from agricultural officers
+* See: Registers, paper files, spreadsheets
+* Say & Do: Enter records manually
+* Pain: Data loss, errors, delays
+* Gain: Automation, fast reporting
+
+
+
+
+2.3 Brainstorming 
+Brainstormed Ideas
+* Manual farm records
+* Excel-based management
+* Web-based system
+* Mobile farm app
+* Salesforce-based FMS
+Selected Idea
+Salesforce-based Farm Management System.
+
+
+
+
+
+
+
+
+3.REQUIREMENT ANALYSIS PHASE
+3.1 Customer Journey Map
+Stages:
+1. Login
+2. Access Farm Management App
+3. Enter Farm and Crop Data
+4. Register Farmers and Buyers
+5. Generate Reports
+6. Analyze Results
+7. Decision Making
+
+
+
+
+
+
+
+
+
+
+
+
+3.2 Solution Requirements
+Functional Requirements
+
+
+FR No
+	Requirement
+	FR-1
+	User Authentication
+	FR-2
+	Farm, Crop, Farmer, Buyer Management
+	FR-3
+	Data Entry and Validation
+	FR-4
+	Relationship Mapping
+	FR-5
+	Report Generation
+	FR-6
+	Dashboard Visualization
+	FR-7
+	User Role Management
+	
+
+Non-Functional Requirements
+
+
+
+
+NFR
+	Description
+	Example
+	Usability
+	Easy interface
+	Simple Lightning UI
+	Security
+	Data protection
+	Profiles & roles
+	Reliability
+	No data loss
+	Cloud backup
+	Performance
+	Fast access
+	Reports in <3 sec
+	Availability
+	24/7 access
+	Cloud hosting
+	Scalability
+	Handles growth
+	More farms/users
+	
+
+
+
+3.3 Data Flow Diagram
+Data Flow:
+User → Salesforce UI → Custom Objects (Farm, Crop, Farmer, Buyer) → Validation Rules → Relationships → Reports → Dashboards
+
+
+
+
+3.4 Technology Stack
+Layer
+	Technology
+	Frontend
+	Salesforce Lightning UI 
+	Backend
+	Salesforce Platform
+	Database
+	Salesforce Cloud
+	Automation
+	Validation Rules
+	Analytics
+	Reports & Dashboards
+	4. PROJECT DESIGN PHASE
+4.1 Problem–Solution Fit
+The FMS replaces manual farming records with automated data management. Cloud storage prevents data loss, dashboards improve analysis, and real-time reports eliminate delays. This ensures accurate and timely agricultural insights.
+
+
+
+
+
+
+4.2 Proposed Solution
+Functional Requirements
+Parameter
+	Description
+	Problem
+	Manual maintenance of farm, crop, farmer, and buyer records leading to errors, data loss, and delays.
+	Solution
+	Salesforce-based Farm Management System with centralized data storage and automation.
+	Innovation
+	Automated data entry validation, cloud storage, and real-time reporting dashboards.
+	Impact
+	Improved data accuracy, faster reporting, and better decision-making for farmers and managers.es
+	Business Model
+	Digital farm management and agricultural data services platform.
+	Scalability
+	Supports multiple farms, users, and regions with cloud-based infrastructure.
+	
+
+4.3 Solution Architecture
+Architecture Layers
+1. Presentation Layer – Salesforce Lightning UI
+2. Application Layer – Validation Rules, Relationships
+3. Data Layer – Custom Objects
+4. Analytics Layer – Reports and Dashboards
+
+
+
+
+5. PROJECT PLANNING & SCHEDULING
+5.1 Project Planning
+* Created Salesforce Developer Org
+* Developed custom objects
+* Configured tabs and Lightning App
+* Created fields and relationships
+* Designed profiles and roles
+* Created users and sharing rules
+* Developed reports and dashboards
+* Conducted testing and reviews
+
+
+Product Backlog, Sprint Schedule, and Estimation (4 Marks)
+Use the below template to create product backlog and sprint schedule
+Sprint
+	Functional Requirement (Epic)
+	User Story Number
+	User Story / Task
+	Story Points
+	Priority
+	Team Members
+	Sprint-1
+	Developer Setup
+	USN-1
+	As a system administrator, I want to create and configure a Salesforce developer account so that I can set up and deploy the Farm Management System.
+	3
+	High
+	Member1
+	Sprint-2a
+	Data Modeling
+	USN-2
+	As an admin, I want to create Farm, Crop, Farmer, and Buyer objects with proper relationships so that agricultural data is stored and managed efficiently.
+	5
+	High
+	Member2
+	Sprint-2
+	Data Modeling
+	USN-3
+	As a staff member, I want tabs and a Lightning App for all farm modules so that I can easily navigate and perform daily operations.
+	5
+	High
+	Member3
+	Sprint-3
+	Automation
+	USN-4
+	As a system, I want to validate farm and crop details such as dates, quantities, and mandatory fields so that incorrect or incomplete records are prevented.
+	3
+	High
+	Member4
+	Sprint-3
+	Automation
+	USN-5
+	As a manager, I want automated flows for crop updates and buyer notifications so that farm operations are processed faster without manual intervention.
+	3
+	High
+	Member4
+	Sprint-4
+	Security
+	USN-6
+	As an administrator, I want role-based access control for farmers, managers, and buyers so that sensitive farm and transaction data is secure.
+	5
+	High
+	Member2
+	Sprint-5
+	Reports
+	USN-7
+	As a farm manager, I want reports showing crop yield, sales, and buyer transactions so that I can monitor farm performance and make informed decisions.
+	4
+	High
+	Member3
+	Sprint-6
+	Dashboards
+	USN-8
+	As a farm manager, I want dashboards showing crop productivity, sales trends, and operational statistics so that I can monitor performance visually.
+	4
+	Medium
+	Member4
+	
+
+
+
+
+
+
+
+Project Tracker, Velocity & Burndown Chart: (4 Marks)
+Sprint
+	Total Story Points
+	Duration
+	Sprint Start Date
+	Sprint End Date (Planned)
+	Story Points Completed (as on Planned End Date)
+	Sprint Release Date (Actual)
+	Sprint-1
+	20
+	6 Days
+	24 Oct 2022
+	29 Oct 2022
+	20
+	29 Oct 2022
+	Sprint-2
+	20
+	6 Days
+	31 Oct 2022
+	05 Nov 2022
+	
+
+	
+
+	Sprint-3
+	20
+	6 Days
+	07 Nov 2022
+	12 Nov 2022
+	
+
+	
+
+	Sprint-4
+	20
+	6 Days
+	14 Nov 2022
+	19 Nov 2022
+	
+
+	
+
+	
+
+
+
+
+
+6. Project Development Phase:
+
+
+Project  Description: 
+
+
+The Farm Management System (FMS) in Salesforce is a comprehensive solution designed   to digitize and streamline agricultural operations. This application empowers farmers, farm   managers, and stakeholders by managing data related to crops, Farm, Farmer, and buyers,    while providing actionable insights through reports, and dashboards.
+
+
+
+
+
+
+Milestone 1-Salesforce:
+
+
+What Is Salesforce?
+
+
+Salesforce is your customer success platform, designed to help you sell, service, market, analyze, and connect with your customers.
+Salesforce has everything you need to run your business from anywhere. Using standard
+products and features, you can manage relationships with prospects and customers,
+collaborate and engage with employees and partners, and store your data securely in the cloud.
+
+
+
+
+Activity1:
+Creating a Salesforce Developer Org:
+
+
+A Developer org has all the features and licenses you need to get started with Salesforce.
+1. Search Developer.salesforce.com/signup
+2. Enter the following details like First name, last name, Email, Role, Company, Country/Region, Postal code, and Username must be unique.
+3. Click sign me up, after a few min you will reserve a mail salesforce org and by using the verify account link you can create your new password.
+4. Click save.
+5. Search login.salesforce.com
+
+
+
+
+6. By using username and password you can into the Salesforce org. The homepage will appear below
+
+
+
+
+Milestone 2-Object:
+
+
+What is an object?
+Salesforce objects are database tables that permit you to store data that is specific to an organization. It consists of fields (columns) and records (rows).
+
+
+In This Application We Use 4 Custom Objects:
+1.Farm
+2.Crop
+3.Farmer 
+4.Buyer
+
+
+Activity 1:
+Create a custom object for Farm:
+To create a custom object, follow these steps:
+1. From setup click on object manager.
+2. Click create, select custom object.
+
+
+
+
+
+
+
+
+3. Fill in the label as " Farm ".
+4. Fill in the plural label as " Farms".
+5. Record name: Farm Name"
+6. Select the data type as "Text".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. In the Optional Features section, select Allow Reports and Track Field History.
+8. In the Deployment Status section, ensure Deployed is selected.
+9. In the Search Status section, select Allow Search.
+10. In the Object Creation Options section, select Add Notes and Attachments related list
+to default page layout.
+
+
+
+
+11. Leave everything else as is, and click Save.
+
+
+Activity 2:
+
+
+
+
+Creation of Crop object:
+1. Click on the gear icon and then select Setup.
+2. Click on the object manager tab just beside the home tab.
+3. After the above steps, have a look on the extreme right you will find a Create
+Dropdown click on that and select Custom Object.
+a. On the Custom Object Definition page, create the object as follows:
+b. Label: Crop
+c. Plural Label: Crops
+d. Record Name: Crop Name
+
+
+e. Select the data type as "Text".
+f. Check the Allow Reports checkbox g. Check the Allow Search checkbox
+h. In the Object Creation Options section, select Add Notes and Attachments related list
+to default page layout i. Click Save.
+
+
+Activity 3:
+
+
+
+
+Creation of Farmer object:
+1. Click on the gear icon and then select Setup.
+2. Click on the object manager tab just beside the home tab.
+3. After the above steps, have a look on the extreme right you will find a Create
+Dropdown click on that and select Custom Object.
+a. On the Custom Object Definition page, create the object as follows:
+b. Label: Farmer
+c. Plural Label: Farmers
+d. Record Name: Farmer Name    e. Select the data type as "Text".
+f. Check the Allow Reports checkbox. g. Check the Allow Search checkbox.
+h. In the Object Creation Options section, select Add Notes and Attachments related list
+to default page layout. i. Click Save.
+
+
+Activity 4:
+
+
+
+
+Creation of Buyer object:
+1. Click on the gear icon and then select Setup.
+2. Click on the object manager tab just beside the home tab.
+3. After the above steps, have a look on the extreme right you will find a Create
+Dropdown click on that and select Custom Object.
+a. On the Custom Object Definition page, create the object as follows:
+b. Label: Buyer
+c. Plural Label: Buyers
+d. Record Name: Buyer Name
+e. Select the data type as "Text".
+f. Check the Allow Reports checkbox. g. Check the Allow Search checkbox.
+h. In the Object Creation Options section, select Add Notes and Attachments related list to default page layout.
+i. Click Save.
+
+
+Milestone 3 -
+ Tab: Tab
+
+
+Tabs in Salesforce help users view the information at a glance. It displays the data of objects and other web content in the application.
+
+
+Activity 1:
+
+
+Creation of Farm tab:
+
+
+Now create a custom tab.
+
+
+1. Click on the Home tab, enter Tabs in Quick Find and select Tabs.
+
+
+
+
+2. Under custom object tabs, click New.
+
+
+3. For Object, select Farm.
+4. For Tab Style, select any icon.
+5. Leave all defaults as is. Click Next, Next, and Save.
+
+
+Activity 2:
+
+
+Creation of Crop tab:
+Now create a custom tab.
+1. Click on Home tab, enter Tabs in Quick Find and select Tabs.
+2. Under custom object tabs, click New.
+3. For Object, select Crop.
+
+
+4. For Tab Style, select any icon.
+5. Leave all defaults as is. Click Next, Next, and Save.
+
+
+Activity 3:
+
+
+Creation of Farmer tab:
+
+
+Now create a custom tab.
+1. Click on the Home tab, enter Tabs in Quick Find and select Tabs.
+2. Under custom object tabs, click New.
+3. For Object, select Farmer.
+4. For Tab Style, select any icon.
+5. Leave all defaults as is. Click Next, Next, and Save.
+
+
+Activity 4:
+
+
+Creation of Buyer tab:
+
+
+Now create a custom tab.
+1. Click on Home tab, enter Tabs in Quick Find and select Tabs.
+2. Under custom object tabs, click New.
+3. For Object, select Buyer
+4. For Tab Style, select any icon.
+5. Leave all defaults as is. Click Next, Next, and Save.
+
+
+Milestone 4 - Lightning App:
+What is an App?
+Apps in Salesforce area group of tabs that help the application function by working together asa unit. It has a name,a logo, and a particular set of tabs. The simplest app usually has just   two tabs.
+
+
+Activity 1:
+Create the Farm Management System app
+
+
+
+
+● From Setup, enter App Manager in the Quick Find and select App Manager.
+
+
+
+
+● Click New Lightning App. Farm Management System as the App Name, then click Next
+● Under App Options, leave the default selections and click Next.
+● Under Utility Items, leave as is and click Next.
+● From Available Items, select Farm, Crop,Farmer,Buyer
+Reports,and Dashboards and move them to Selected Items. Click Next. ● From Available Profiles, select System Administrator and move it to   Selected Profiles.Click Save & Finish.
+● To verify your changes, click the App Launcher, type Farm Management System and select the Job Application app.
+Note:
+1. App Launcher-Displays available apps.
+2. App Name-Displays the current selected app.
+
+
+
+
+3. Navigation menu-Displays the tabs available inside the app.
+
+
+
+
+
+
+
+
+
+
+
+
+Milestone 5 - 
+Fields and Relationship: What are fields?
+
+
+Fields in Salesforce represent what the columns represent in relational databases. It can store data values which are required for a particular object in a record.
+
+
+Activity 1:
+Creation of fields for the Farm objects:
+1. click the gear icon and select Setup. This launches Setup in a new tab.
+2. Click the Object Manager tab next to Home.
+3. Select Farm.
+4. Select Fields & Relationships from the left navigation, and click New
+
+
+
+
+
+
+
+
+
+
+
+
+5.Choose Data type as a picklist,Click next
+
+
+
+
+
+
+
+
+6.Enter Field Label (Farm Type),and Enter Values as (Crop,Livestock,Mixed) 
+7.Next,Next Click Save.
+
+
+
+
+
+
+
+
+Now let's create the other fields following Activity1 steps 1 to 4 and we must choose the data types of the fields carefully.
+
+
+1.Next we Create another Picklist Field,Enter field label (Soil Quality) enter values (Organic,Cover Crops,Composting)
+2.Again we Create Picklist field,Field Label (Irrigation type), Enter Values (Sprinkler irrigation,Drip irrigation,localized irrigation)
+3.Choose data type as a text,enter field label(Location) 4.Choose data type as text,enter field label (size)
+5.Create a Master Detail relationShip with Farmer Object.
+
+
+Activity 2:
+Creation of fields for the Crop objects:
+
+
+1.Choose Data type As a text,Enter Field Label name (Crop Name),Next save. 2.Select Data type as date ,Enter Field label (Planting Date),then save .
+3.Again we select data type as a date,Enter field labe (Harvest date),save
+4.Next We Create Lookup relationship on crop object realted to Farm Object.
+5.We select adata type as currency,Enter field Label (Actual Yield), Next Save it.
+6.Select Data type as a Number,enter Field Label (Total Acres Harvested),Enter Maximum Length(20) and save.
+7.Now We create Formula Field For That Select data Type As a Formula,Click Next.
+
+
+
+
+
+
+
+
+
+
+8.Enter Field Label (Expected Yield per Acre),Select formula return type as Currency,click Next.
+ 9.Enter a Formula Actual Yield Divide By Total Acre Harvested, then click next and save.
+
+
+
+
+
+
+
+
+Activity 3:
+Creation of fields for the Farmer objects:
+
+
+1.Select Data type Phone,Enter field label(Contact Number),next Save.
+2.Select Data type Picklist,Enter Field Label(State),Enter values (Telangana,Andhra Pradesh,Tamilnadu),save.
+3.Choose Data type Picklist,Enter Field Label (District),Enter Values of district,next save.
+4.Again select Data type as Picklist,Enter Field Label (Village),Enter Values of villages,next save.
+
+
+Creation of field dependency :
+
+
+1.Now create Field Dependency For District field,Open Object Manager,Choose Farmer object ,select Fields&Relationships,On Right side We have Field Dependency option,select that option.
+2.Click new, Select Controlling Field as State,Dependent Field As District,Click on Continue.
+3. Select the appropriate Value in each column by double-clicking them.
+4. For Ex. Telangana - Yadadri Bhongir.
+5.Click Include Values. And it is also the same for Andhra Pradesh, Tamilnadu with its city.
+
+
+6.Click Preview, then test the dependency by selecting a different State and viewing the associate Values available for Particular state.
+
+
+
+
+  
+7. Click Close to close the preview window, Click Save.
+
+
+Activity 4:
+
+
+Creation of fields for the Buyer objects:
+
+
+1.Select Data type as a Phone,Enter a Field Label(Contact),Save.  
+2.Select Data type as an Email,Enter Field Label(Email), Next save. 
+3.Select Data type Text area,Enter Field Label(Address),Save it.
+4.Select Data type Picklist, Field Label(Buyer Type),Enter values (Wholesale,Retail),Click Save.
+
+
+
+
+Milestone 6- Profile:
+
+
+
+
+What is a profile?
+A profile is a group/collection of settings and permissions that define what a user can do in
+salesforce. A profile controls “Object permissions, Field permissions, User permissions, Tab
+settings, App settings, Apex class access, Visualforce page access, Page layouts, Record Types, Login hours & Login IP ranges.
+A profile can be assigned to many users, but user can be assigned single profile at a time.
+
+
+Activity 1:
+
+
+Create a custom profile:
+1. From setup , enter profiles in Quick Find box
+2. Select profiles (Standard user).
+3. Click clone.
+4. For Profile, enter Sales Department.
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+5. Click save.
+
+
+
+
+Activity 2:
+
+
+Create a custom profile-2:
+Create a profile with the profile name as “ Farm Manager” .
+
+
+
+
+6. From setup , enter profiles in Quick Find box
+7. Select profiles (Standard user).
+8. Click clone.
+
+
+
+
+Milestone 7- Role
+
+
+In Salesforce, roles are used to determine which users have access to certain data and functions within the system. They are also used to define the reporting hierarchy within an organization.   Users with higher roles have greater access to data and more control over the system.
+
+
+Activity-1
+Creation of role
+
+
+1. From the Quick find box search for the role and click on the roles option
+2. select the set up roles option
+  
+
+
+
+
+
+
+
+
+
+3.Below the CEO click on add role and enter the label name as a ” Farm Manager ” and role name will be Automatically populated and click on save.
+
+
+  
+
+
+
+
+
+
+
+Milestone 8-User :
+
+
+What is a user?
+A user is anyone who logs into Salesforce. Users are employees at your company, such as sales reps, managers, and IT specialists, who need access to the company's records. Every user in
+Salesforce has a user account. The user account identifies the user, and the user account settings determine what features and records the user can access.
+
+
+NOTE- As Salesforce license can only be used by 2 Users at a time in Dev Org, so If you don’t find
+salesforce license then deactivate a user who has salesforce license Or change the license type from Salesforce to any other.
+
+
+Activity 1:
+
+
+To Create a user:
+1. From Setup, enter Users in the Quick Find box, then select Users.
+2. Click New User.
+
+
+  
+
+
+
+3. Enter First name as Farm and last name as Manager.
+4. Enter the user’s name and email address and a unique username in the form of an email address. By default, the username is the same as the email address.
+5. Select the role Farm Manager.
+6. Select user License as Standard Platform User.
+7. Select profile(Farm Manager).
+8. Click save.
+
+
+Activity 2:
+Create a user with a username as “Sales Department”, and assign him the sales Manager profile. Follow the steps from above Activity
+
+
+Milestone 9-Sharing Rules:
+
+
+What are Sharing Rules?
+Sharing rules help users to share records based on conditions. It is basically created for objects  whose organization-wide defaults (OWD) are set to public read-only or private because sharing rules can only extend the access and not restrict it.
+Types of sharing rules,
+•Owner-based Sharing Rules  •Criteria-based Sharing Rules
+
+
+Activity 1:
+
+
+Create a sharing rule
+1) Goto Sharing Settings, which can be found under the Quick Find section.
+2) Scroll down and find the candidate object where a sharing rule needs to be added, and then click on New to create a new sharing rule.
+3) Add the label of the sharing rule you want to make.
+4) Select your rule type based on the criteria.
+5) Select the field can join immediately check field from the Crop object.
+6) Select the Crop as equal and value is True.
+7) And in selecting the users to share with the section select roles and in that select Farm Manager.
+8) And in the section of select the level of access for the users give the access Read/Write.
+9) And save the rule.
+  
+
+
+
+
+
+
+
+Activity 2:
+
+
+Create a Sharing Rule to Share the records of Buyer to Sales department with the Access of Read/Write.
+Follow the steps from above Activity.
+
+
+
+
+Milestone-10: User Adoption 
+
+
+Activity 1:Create a Record(Farmer)
+● Click on App Launcher on left side of screen.
+● Search Farm Management & click on it.
+● Click on Farmer Tab.
+● Click new and fill details & Save.
+
+
+  
+
+
+
+Milestone 11-Reports:
+
+
+
+
+What are Reports?
+A report is a list of records that meet the criteria you define. It's displayed in rows and
+columns, and can be filtered, grouped, or displayed in a graphical chart. Every report is stored  in a folder. Folders can be public, hidden, or shared, and can be set to read-only or read/write.
+
+
+Activity 1:
+Create a report:
+Create a report that displays rating of the account and which has type and account name.
+1) Click on app launcher search for reports.
+2) Click on the new report and select the category has Farmer with Farms.
+  
+
+3) In the details section select the option start report.
+4) In Outline Click on Column Select Which Field you want to display in the Report.
+5) Click Group,Select Which Fields You Want to Group.
+6) Save the report by giving label name(Farmer with Farms) and save the folder as a public folder and save the report.
+
+
+
+
+  
+
+
+
+Activity 2:
+Create a Report using the Objects Crops, Buyers. Follow the steps from above Activity.
+
+
+
+
+
+
+Milestone 12-Dashboard:
+
+
+Dashboards provide more insights than reports as they combine the data from many reports and   show a summarized result. Looking at many reports at a time gives the flexibility of combining the results from them quickly. Also summaries in dashboards help us decide on action plans quicker.    The dashboards can contain charts, graphs and Tabular data.
+
+
+Activity 1:
+Create a Dashboard:
+1. Click the Dashboard tab.
+2. Click New Dashboard.
+3. Name the dashboard Farmers with farms and click Create.
+4. Click +Component.
+5. Select the Farmers with Farms and click Select.
+6. Select the Gauge chart and click Add.
+7. Click Save and then Done.
+
+
+  
+
+
+
+
+
+Milestone-13: View Report and Dashboard: 
+
+
+Activity 1: Report
+● Click on App Launcher on left side of screen.
+● Search Farm Management System & click on it.
+● Click on Reports Tab.
+● Click on Farmers with Farms & see records
+
+
+  
+
+
+
+Activity 2: Dashboard
+
+
+
+
+• Click on App Launcher on left side of screen.
+• Search Farm Management system & click on it.
+• Click on Dashboard Tab.
+• Click Farmers With farms & see records.
+
+
+
+
+
+
+  
+
+7. FUNCTIONAL & PERFORMANCE TESTING
+
+
+During the testing phase, screenshots were captured from the Salesforce interface to verify system functionality. The following were tested:
+* Creation of Farm, Crop, Farmer, and Buyer records
+* Validation of input fields
+* Relationship and dependency checks
+* Profile and role access testing
+* Sharing rule verification
+* Report and dashboard generation
+Performance testing ensured smooth system response and stability during multiple user operations.
+8. ADVANTAGES & DISADVANTAGES
+Advantages
+* Centralized data system
+* Reduced paperwork
+* Improved accuracy
+* Better monitoring
+* Real-time analytics
+Disadvantages
+* Requires internet connection
+* Salesforce license dependency
+* Limited offline access
+
+
+9. Conclusion:
+
+
+ The Farm Management System successfully digitizes agricultural data management using Salesforce. It improves efficiency, reduces errors, and enables farmers and managers to make informed decisions through automation and analytics.
+10. FUTURE SCOPE
+* Mobile application integration
+* AI-based crop prediction
+* Weather data integration
+* IoT sensor connectivity
+* Government scheme integration
+* Market price forecasting
+11. APPENDIX
+* Source Code: Salesforce Configuration and Metadata
+* Dataset: Farm, Crop, Farmer, and Buyer Records
+* Tools Used: Salesforce Developer Org
+
+
+                                        Thank You
